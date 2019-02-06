@@ -5,6 +5,8 @@ SRCDIR=src
 
 CFLAGS=-I$(SRCDIR)
 
+$(shell   mkdir -p $(OUT))
+
 SRC := $(wildcard $(SRCDIR)/*.c)
 OBJ := $(patsubst $(SRCDIR)/%.c, $(BDIR)/%.o, $(SRC))
 
@@ -13,9 +15,6 @@ $(BDIR)/%.o: $(SRCDIR)/%.c
 
 $(BDIR)/ctest.exe: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
-	
-$(BDIR)/:
-	mkdir -p $@
 
 .PHONY: clean
 
