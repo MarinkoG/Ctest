@@ -13,6 +13,9 @@ $(BDIR)/%.o: $(SRCDIR)/%.c
 
 $(BDIR)/ctest.exe: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
+	
+$(BDIR)/:
+    mkdir -p $@
 
 .PHONY: clean
 
