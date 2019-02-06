@@ -5,7 +5,7 @@ SRCDIR=src
 
 CFLAGS=-I$(SRCDIR)
 
-$(shell   mkdir -p $(OUT))
+$(shell   mkdir -p $(BDIR))
 
 SRC := $(wildcard $(SRCDIR)/*.c)
 OBJ := $(patsubst $(SRCDIR)/%.c, $(BDIR)/%.o, $(SRC))
