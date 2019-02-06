@@ -15,7 +15,7 @@ $(BDIR)/ctest.exe: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 	
 $(BDIR)/:
-    mkdir -p $@
+	mkdir -p $@
 
 .PHONY: clean
 
